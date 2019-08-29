@@ -1,11 +1,17 @@
 import React from 'react';
 
 import CarouselDisplay from './CarouselDisplay';
+import FeatureDisplay from './FeatureDisplay';
+import PopularDisplay from './PopularDisplay';
+import Footer from './Footer';
 
 const LandingPage = () => {
   return (
-    <div className="container">
+    <div>
       <CarouselDisplay />
+      <FeatureDisplay />
+      <PopularDisplay />
+      <Footer />
     </div>
   );
 };
