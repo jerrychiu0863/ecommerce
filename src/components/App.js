@@ -4,12 +4,10 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 //Componenets
 import Navbar from './Navbar';
-import LandingPage from './LandingPage';
+import LandingPage from './main/LandingPage';
+import ProductItem from './products/ProductItem';
 import AllProducts from './products/AllProducts';
-import Bracelets from './products/Bracelets';
-import Earings from './products/Earings';
-import Necklaces from './products/Necklaces';
-import Rings from './products/Rings';
+import Products from './products/Products';
 import ShoppingCart from './ShoppingCart';
 import Header from './Header';
 
@@ -23,10 +21,12 @@ const App = () => {
           <Route path="/" exact component={LandingPage}></Route>
           <Route path="/shopping-cart" exact component={ShoppingCart}></Route>
           <Route path="/products/all" exact component={AllProducts}></Route>
-          <Route path="/products/bracelets" exact component={Bracelets}></Route>
-          <Route path="/products/earings" exact component={Earings}></Route>
-          <Route path="/products/necklaces" exact component={Necklaces}></Route>
-          <Route path="/products/rings" exact component={Rings}></Route>
+          <Route path="/products/:category" exact component={Products}></Route>
+          <Route
+            path="/product/:productId"
+            exact
+            component={ProductItem}
+          ></Route>
         </Switch>
       </div>
     </Router>

@@ -1,4 +1,32 @@
-.title {
+.PopularDisplay {
+  margin: 50px auto 0 auto;
+}
+
+.CardDisplay {
+  margin: 0 auto 40px auto;
+  height: auto;
+}
+
+.Card {
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.Card__container {
+  padding: 0 5px;
+}
+
+.Card-img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 5px;
+  border-radius: 2px;
+}
+
+.Card__caption {
+}
+
+.Card__caption--title {
   /*Check browser compatibility*/
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -6,4 +34,19 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: normal;
+  margin: 0;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+  line-height: 1.2;
+  height: 40px;
+}
+
+.Card__caption--seller {
+  margin: 3px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.Card__caption--price {
+  margin: 0;
 }

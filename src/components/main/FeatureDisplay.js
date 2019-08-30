@@ -7,7 +7,7 @@ const FeatureDisplay = () => {
         background: '#f9f9f9',
         textAlign: 'center',
         padding: '40px 0',
-        marginTop: '60px'
+        marginTop: '100px'
       }}
     >
       <section className="row container" style={{ margin: '0 auto' }}>

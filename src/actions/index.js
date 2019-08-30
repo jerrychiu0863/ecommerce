@@ -10,3 +10,10 @@ export const signOut = () => {
     type: 'SIGN_OUT'
   }
 }
+
+export const onNavClick = (nav) => {
+  return {
+    type: 'ON_NAV_CLICK',
+    payload: nav
+  }
+}

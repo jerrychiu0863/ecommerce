@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import Slider from 'react-slick';
-import carousel_one from '../assets/carousel/carousel_one_medium_720x480.jpg';
-import carousel_two from '../assets/carousel/carousel_two_medium_720x480.jpg';
-import carousel_three from '../assets/carousel/carousel_three_medium_720x480.jpg';
-import carousel_four from '../assets/carousel/carousel_four_medium_720x480.jpg';
+import carousel_one from '../../assets/carousel/carousel_one_medium_720x480.jpg';
+import carousel_two from '../../assets/carousel/carousel_two_medium_720x480.jpg';
+import carousel_three from '../../assets/carousel/carousel_three_medium_720x480.jpg';
+import carousel_four from '../../assets/carousel/carousel_four_medium_720x480.jpg';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
-import '../css/Carousel.css';
+import '../../css/Carousel.css';
 
 class CarouselDisplay extends Component {
   state = { width: window.innerWidth };
@@ -42,7 +42,7 @@ class CarouselDisplay extends Component {
         style={{
           width: '100%',
           //marginLeft: '-138px',
-          margin: '20px auto 20px auto',
+          margin: '20px auto 20px auto'
           //background: '#f7f7f7'
         }}
         className="Carousel"
