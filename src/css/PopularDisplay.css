@@ -21,6 +21,11 @@
   height: auto;
   margin-bottom: 5px;
   border-radius: 2px;
+  transition: opacity 0.2s linear;
+}
+
+.Card-img:hover {
+  opacity: 0.8;
 }
 
 .Card__caption {

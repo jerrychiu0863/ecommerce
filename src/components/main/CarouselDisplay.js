@@ -42,7 +42,8 @@ class CarouselDisplay extends Component {
         style={{
           width: '100%',
           //marginLeft: '-138px',
-          margin: '20px auto 20px auto'
+          margin: '0px auto 20px auto',
+          paddingTop: '50px'
           //background: '#f7f7f7'
         }}
         className="Carousel"

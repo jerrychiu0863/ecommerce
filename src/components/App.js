@@ -10,6 +10,7 @@ import AllProducts from './products/AllProducts';
 import Products from './products/Products';
 import ShoppingCart from './ShoppingCart';
 import Header from './Header';
+import Footer from './Footer';
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
             component={ProductItem}
           ></Route>
         </Switch>
+        <Footer />
       </div>
     </Router>
   );

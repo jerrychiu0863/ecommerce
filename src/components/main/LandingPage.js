@@ -4,7 +4,7 @@ import CarouselDisplay from './CarouselDisplay';
 import FeatureDisplay from './FeatureDisplay';
 import PopularDisplay from './PopularDisplay';
 import ReviewDisplay from './ReviewDisplay';
-import Footer from './Footer';
+
 
 const LandingPage = () => {
   return (
@@ -13,7 +13,7 @@ const LandingPage = () => {
       <FeatureDisplay />
       <PopularDisplay />
       <ReviewDisplay />
-      <Footer />
+
     </div>
   );
 };

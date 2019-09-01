@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../css/PopularDisplay.css';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 const formatPrice = num => {
@@ -8,7 +9,6 @@ const formatPrice = num => {
 };
 
 const PopularDisplay = props => {
-  console.log(props.products);
   return (
     <React.Fragment>
       <div className="PopularDisplay container">
@@ -20,13 +20,15 @@ const PopularDisplay = props => {
       </div>
       <div className="CardDisplay container row">
         {props.products.map(product => (
-          <div className="Card col-6 col-sm-4 col-md-2">
+          <div className="Card col-6 col-sm-4 col-md-2" key={product.id}>
             <div className="Card__container">
-              <img
-                src={require(`../../assets/products/${product.img}`)}
-                className="Card-img"
-                alt="popular product"
-              />
+              <Link to={`/product/${product.id}`}>
+                <img
+                  src={require(`../../assets/products/${product.img}`)}
+                  className="Card-img"
+                  alt="popular product"
+                />
+              </Link>
               <div className="Card__caption">
                 <p className="Card__caption--title">{product.title}</p>
                 <p className="Card__caption--seller">{product.seller}</p>

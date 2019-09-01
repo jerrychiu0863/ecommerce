@@ -1,68 +1,33 @@
 import React from 'react';
-import '../../css/PopularDisplay.css';
+import '../../css/Review.css';
+import { reviews } from '../../config/review';
 
 const ReviewDisplay = () => {
   return (
     <React.Fragment>
-      <div className="PopularDisplay container">
+      <div className="Review container">
         <p
           style={{ paddingLeft: '5px', fontSize: '22px', marginBottom: '10px' }}
         >
-          Reviews from buyers
+          Reviews from Buyers
         </p>
       </div>
-      <div
-        className="container row"
-        style={{ margin: '0 auto', textAlign: 'center' }}
-      >
-        <div className="col-12 col-md-4" style={{ marginBottom: '20px' }}>
-          <div
-            style={{
-              width: '50px',
-              height: '50px',
-              background: '#999',
-              margin: '0 auto 10px auto'
-            }}
-          >
-            <img
-              src={require('../../assets/products/ring/couple-rings_720x480.jpg')}
-              style={{
-                width: '100%',
-                height: '100%',
-                borderRadius: '50%'
-              }}
-            />
+      <div className="Review__container container row">
+        {reviews.map(review => (
+          <div className="ReviewCard col-12 col-sm-6 col-md-4" key={review.id}>
+            <div className="ReviewCard__avatar">
+              <img
+                className="ReviewCard__avatar--img"
+                src={require(`../../assets/review/review-${review.id}_60x60.jpg`)}
+                alt="avatar"
+              />
+            </div>
+            <p className="ReviewCard--header">
+              <b>{review.reviewer}</b> wrote on {review.timeStamp}
+            </p>
+            <p className="ReviewCard--review">{review.review}</p>
           </div>
-          <p style={{ marginBottom: '10px' }}>
-            <b>Abrayard</b> wrote on August 26
-          </p>
-          <p style={{ maxWidth: '250px', margin: '0 auto', fontSize: '14px' }}>
-            Love it! Gorgerous little piece for my nightstand!
-          </p>
-        </div>
-        <div className="col-12 col-md-4">
-          {' '}
-          <div
-            style={{
-              width: '50px',
-              height: '50px',
-              background: '#999',
-              margin: '0 auto'
-            }}
-          >
-            <img
-              src={require('../../assets/products/ring/couple-rings_720x480.jpg')}
-              style={{ width: '100%', height: '100%', borderRadius: '50%' }}
-            />
-          </div>
-          <p style={{ marginBottom: '10px' }}>
-            <b>Abrayard</b> wrote on August 26
-          </p>
-          <p style={{ maxWidth: '250px', margin: '0 auto', fontSize: '14px' }}>
-            Love it! Gorgerous little piece for my nightstand!
-          </p>{' '}
-        </div>
-        <div className="col-12 col-md-4"> 3</div>
+        ))}
       </div>
     </React.Fragment>
   );

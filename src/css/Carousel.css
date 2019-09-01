@@ -1,4 +1,6 @@
 .Carousel {
+  box-shadow: inset 0px 4px 8px -3px rgba(17, 17, 17, .06);
+
 }
 
 div[class='slick-slide slick-active slick-center slick-current'] img {

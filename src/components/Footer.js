@@ -11,7 +11,9 @@ const Footer = () => {
         color: '#f3f3f3'
       }}
     >
-      Footer
+      <p style={{ opacity: '.8', margin: '0', fontSize: '14px' }}>
+        &copy; 2019 DecoMe, Inc.
+      </p>
     </div>
   );
 };
