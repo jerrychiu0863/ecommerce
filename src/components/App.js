@@ -20,7 +20,7 @@ const App = () => {
         <Navbar />
         <Switch>
           <Route path="/" exact component={LandingPage}></Route>
-          <Route path="/shopping-cart" exact component={ShoppingCart}></Route>
+          <Route path="/shoppingcart" exact component={ShoppingCart}></Route>
           <Route path="/products/all" exact component={AllProducts}></Route>
           <Route path="/products/:category" exact component={Products}></Route>
           <Route

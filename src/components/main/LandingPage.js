@@ -5,7 +5,6 @@ import FeatureDisplay from './FeatureDisplay';
 import PopularDisplay from './PopularDisplay';
 import ReviewDisplay from './ReviewDisplay';
 
-
 const LandingPage = () => {
   return (
     <div>
@@ -13,7 +12,6 @@ const LandingPage = () => {
       <FeatureDisplay />
       <PopularDisplay />
       <ReviewDisplay />
-
     </div>
   );
 };

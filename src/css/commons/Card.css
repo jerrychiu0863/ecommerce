@@ -1,0 +1,48 @@
+.Card {
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.Card__container {
+  padding: 0 5px;
+}
+
+.Card-img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 5px;
+  border-radius: 2px;
+  transition: opacity 0.2s linear;
+}
+
+.Card-img:hover {
+  opacity: 0.8;
+}
+
+.Card__caption {
+}
+
+.Card__caption--title {
+  /*Check browser compatibility*/
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  margin: 0;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+  line-height: 1.2;
+  height: 40px;
+}
+
+.Card__caption--seller {
+  margin: 3px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.Card__caption--price {
+  margin: 0;
+}

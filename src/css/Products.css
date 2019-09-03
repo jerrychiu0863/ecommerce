@@ -1,0 +1,20 @@
+.ProductsHeader__container {
+  display: flex;
+  align-items: center;
+}
+
+.ProductsHeader-title {
+  font-weight: bold;
+  font-size: 20px;
+  text-transform: capitalize;
+  margin-right: auto;
+}
+
+.ProductsHeader-label {
+  font-size: 14px;
+  margin-right: 3px;
+}
+
+.ProductsHeader-select {
+  font-size: 12px;
+}
