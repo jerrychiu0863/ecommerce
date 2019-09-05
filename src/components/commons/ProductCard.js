@@ -4,7 +4,7 @@ import '../../css/commons/Card.css';
 
 const formatPrice = num => {
   const formatedStr = num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
-  return `NTD $${formatedStr}`;
+  return `NT$ ${formatedStr}`;
 };
 
 const ProductCard = props => {

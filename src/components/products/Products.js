@@ -30,31 +30,36 @@ class Products extends Component {
     }
   }
 
+  renderSubNavbar() {
+    if (this.props.match.params.category === 'all') {
+      return <b>All categories</b>;
+    } else {
+      return (
+        <React.Fragment>
+          <Link to="/products/all" style={{ color: '#333' }}>
+            <b>All categories &nbsp;</b>
+          </Link>
+          <span style={{ textTransform: 'capitalize' }}>
+            &gt; {this.props.match.params.category}
+          </span>
+        </React.Fragment>
+      );
+    }
+  }
+
   render() {
-    //console.log(typeof this.state.select);
+    //console.log(this.props.match.params.category);
     return (
-      <div 
-        style={{
-          width: '100%',
-          margin: '0px auto 20px auto',
-          paddingTop: '50px',
-          boxShadow: 'inset 0px 4px 8px -3px rgba(17, 17, 17, .06)'
-        }}
-      >
-        <div className="container row" style={{ margin: '0 auto' }}>
-          <div className="col-md-3">
-            <Link to="/products/all" style={{ color: '#333' }}>
-              <b>All categories</b>
-            </Link>
-            <span> > {this.props.match.params.category}</span>
-          </div>
-          <div className="col-md-9">
-            <div className="ProductsHeader__container">
+      <div className="Products">
+        <div className="Products__container container row">
+          <div className="col-12 col-md-3 mb-2">{this.renderSubNavbar()}</div>
+          <div className="col-12 col-md-9">
+            <div className="ProductsHeader__container mb-2">
               <span className="ProductsHeader-title">
                 {this.props.match.params.category}
               </span>
               <div>
-                <label className="ProductsHeader-label">Sort by</label>
+                <label className="ProductsHeader-label mr-1">Sort by</label>
                 <select
                   className="ProductsHeader-select"
                   onChange={e => this.props.onSelectChange(e.target.value)}
@@ -87,9 +92,12 @@ class Products extends Component {
 
 const mapStateToProps = (state, ownProperty) => {
   return {
-    products: Object.values(state.products).filter(
-      product => product.category === ownProperty.match.params.category
-    ),
+    products:
+      ownProperty.match.params.category !== 'all'
+        ? Object.values(state.products).filter(
+            product => product.category === ownProperty.match.params.category
+          )
+        : Object.values(state.products),
     sortBy: state.sortBy
   };
 };

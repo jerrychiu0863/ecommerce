@@ -12,6 +12,7 @@ const PopularDisplay = props => {
       <div className="CardDisplay container row">
         {props.products.map(product => (
           <ProductCard
+            key={product.id}
             id={product.id}
             gridClass="col-6 col-sm-4 col-md-2"
             img={product.img}

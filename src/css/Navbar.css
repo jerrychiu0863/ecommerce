@@ -2,13 +2,13 @@
   color: #666;
   text-transform: capitalize;
   transition: all 0.2s linear;
+  border-bottom: 2px solid #fff;
 }
 
 .nav-link:hover {
   color: #333;
-  background: #f9f9f9;
 }
 
-/*.nav-link.nav-link-active {
-  border-width: 10px;
-}*/
+.nav-link.nav-link-active {
+  border-color: #333;
+}
