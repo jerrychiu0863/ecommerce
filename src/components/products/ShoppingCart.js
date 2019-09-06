@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import '../css/ShoppingCart.css';
+import '../../css/products/ShoppingCart.css';
 import { connect } from 'react-redux';
 import {
   removeItemFromCart,
   addOneQuantity,
   removeOneQuantity
-} from '../actions';
+} from '../../actions';
 
 class ShoppingCart extends Component {
   renderTotalPrice() {
@@ -54,27 +54,27 @@ class ShoppingCart extends Component {
                   <img
                     width="100%"
                     height="auto"
-                    src={require(`../assets/products/${product.img}`)}
+                    src={require(`../../assets/products/${product.img}`)}
                     alt={product.title}
                   />
                 </div>
                 <p className="Item--title mr-2 ml-2">{product.title}</p>
-                <div className="ml-4 mr-auto">
+                <div className="Item__quantity ml-4 mr-auto">
                   <p>
                     <i
-                      className="Item--arrow fas fa-caret-left"
+                      className="Item__quantity--arrow fas fa-caret-left"
                       onClick={() => this.props.removeOneQuantity(product.id)}
                     ></i>
-                    <span className="Item--quantity mr-2 ml-2">
+                    <span className="Item__quantity--quantity mr-2 ml-2">
                       {product.quantity}
                     </span>
                     <i
-                      className="Item--arrow fas fa-caret-right"
+                      className="Item__quantity--arrow fas fa-caret-right"
                       onClick={() => this.props.addOneQuantity(product.id)}
                     ></i>
                   </p>
                 </div>
-                <p>
+                <p  className="Item--price">
                   {this.formatPrice(product.price)}
                   <i
                     onClick={() => this.props.removeItemFromCart(product.id)}

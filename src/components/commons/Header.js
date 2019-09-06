@@ -1,8 +1,8 @@
 import React from 'react';
-import '../css/Header.css';
+import '../../css/commons/Header.css';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import GoogleAuth from './GoogleAuth';
+import GoogleAuth from '../GoogleAuth';
 
 const Header = props => {
   //console.log(props.products.length);

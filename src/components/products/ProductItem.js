@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../../css/ProductItem.css';
+import '../../css/products/ProductItem.css';
 import { connect } from 'react-redux';
 import { addItemToCart } from '../../actions';
 
@@ -7,17 +7,14 @@ import Modal from '../Modal';
 
 class ProductItem extends Component {
   state = {
-    quantity: 1
+    quantity: 1,
+    isModalOpen: false
   };
 
   renderBtn() {
     if (!this.props.isSignedIn) {
       return (
-        <button
-          onClick={() => alert('Please login in!!')}
-          className="btn btn-primary mt-2"
-          style={{ width: '100%' }}
-        >
+        <button onClick={this.toggleModal} className="Cart-btn btn mt-2">
           Add to cart
         </button>
       );
@@ -31,8 +28,7 @@ class ProductItem extends Component {
               this.state.quantity
             )
           }
-          className="btn btn-primary mt-2"
-          style={{ width: '100%' }}
+          className="Cart-btn btn mt-2"
         >
           Add to cart
         </button>
@@ -59,8 +55,11 @@ class ProductItem extends Component {
     ));
   }
 
+  toggleModal = () => {
+    this.setState({ isModalOpen: !this.state.isModalOpen });
+  };
+
   render() {
-    //console.log(typeof this.props.quantity);
     return (
       <div className="ProductItem">
         <div className="container row" style={{ margin: '0 auto' }}>
@@ -103,7 +102,7 @@ class ProductItem extends Component {
             </p>
           </div>
         </div>
-        <Modal />
+        {this.state.isModalOpen && <Modal closeModal={this.toggleModal} />}
       </div>
     );
   }

@@ -1,7 +1,7 @@
 import React from 'react';
-import '../css/Navbar.css';
+import '../../css/commons/Navbar.css';
 import { Link, withRouter } from 'react-router-dom';
-import { navs } from '../config/navs';
+import { navs } from '../../config/navs';
 
 const Navbar = props => {
   return (

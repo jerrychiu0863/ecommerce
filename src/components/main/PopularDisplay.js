@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../css/PopularDisplay.css';
+import '../../css/main/PopularDisplay.css';
 import { connect } from 'react-redux';
 import ProductCard from '../commons/ProductCard';
 

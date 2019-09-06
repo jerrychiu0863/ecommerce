@@ -1,0 +1,20 @@
+.Modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.Modal__container {
+  position: fixed;
+  min-width: 320px;
+  min-height: 100px;
+  background: #fff;
+  border-radius: 2px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+}

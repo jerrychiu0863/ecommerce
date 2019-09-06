@@ -1,28 +1,29 @@
-import React from 'react';
+import React, { Component } from 'react';
+import '../css/Modal.css';
 import ReactDOM from 'react-dom';
 
-const Modal = props => {
-  return ReactDOM.createPortal(
-    <div
-      className="modal"
-      style={{
-        position: 'absolute',
-        top: '0',
-        left: '0',
-        width: '100vw',
-        height: '100vh',
-        background: 'rgba(0,0,0,.2)'
-      }}
-    >
-      <div
-        className="modal__container"
-        style={{ width: '20vw', height: '20vh' }}
-      >
-        <p>Modal</p>
-      </div>
-    </div>,
-    document.querySelector('#modal')
-  );
-};
+const modalRoot = document.querySelector('#modal');
+
+class Modal extends Component {
+  el = document.createElement('div');
+  componentDidMount() {
+    modalRoot.appendChild(this.el);
+  }
+
+  componentWillUnmount() {
+    modalRoot.removeChild(this.el);
+  }
+
+  render() {
+    return ReactDOM.createPortal(
+      <div className="Modal" onClick={this.props.closeModal}>
+        <div onClick={e => e.stopPropagation()} className="Modal__container">
+          <p>Please sing up to add item to your cart!</p>
+        </div>
+      </div>,
+      modalRoot
+    );
+  }
+}
 
 export default Modal;

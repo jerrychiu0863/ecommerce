@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div
       style={{
-        marginTop: '100px',
+        marginTop: '80px',
         background: '#232347',
         padding: '20px 0',
         textAlign: 'center',

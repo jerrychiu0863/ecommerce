@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../../css/Products.css';
+import '../../css/products/Products.css';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { onSelectChange } from '../../actions';

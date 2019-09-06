@@ -1,15 +1,15 @@
 import React from 'react';
-import '../App.css';
+import '../css/App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 //Componenets
-import Navbar from './Navbar';
+import Navbar from './commons/Navbar';
 import LandingPage from './main/LandingPage';
 import ProductItem from './products/ProductItem';
 import Products from './products/Products';
-import ShoppingCart from './ShoppingCart';
-import Header from './Header';
-import Footer from './Footer';
+import ShoppingCart from './products/ShoppingCart';
+import Header from './commons/Header';
+import Footer from './commons/Footer';
 
 const App = () => {
   return (
