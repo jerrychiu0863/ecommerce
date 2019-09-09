@@ -1,5 +1,6 @@
 import React from 'react';
 
+//Components
 import CarouselDisplay from './CarouselDisplay';
 import FeatureDisplay from './FeatureDisplay';
 import PopularDisplay from './PopularDisplay';

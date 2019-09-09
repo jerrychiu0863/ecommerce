@@ -6,11 +6,7 @@ const ReviewDisplay = () => {
   return (
     <React.Fragment>
       <div className="Review container">
-        <p
-          style={{ paddingLeft: '5px', fontSize: '22px', marginBottom: '10px' }}
-        >
-          Reviews from Buyers
-        </p>
+        <p className="Review-header">Reviews from Buyers</p>
       </div>
       <div className="Review__container container row">
         {reviews.map(review => (

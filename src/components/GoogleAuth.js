@@ -37,7 +37,14 @@ class GoogleAuth extends Component {
     if (this.props.auth.isSignedIn === null) {
       return null;
     } else if (this.props.auth.isSignedIn === true) {
-      return <button className="btn btn-sm btn-outline-secondary" onClick={() => this.auth.signOut()}>Sign out</button>;
+      return (
+        <button
+          className="btn btn-sm btn-outline-secondary"
+          onClick={() => this.auth.signOut()}
+        >
+          Sign out
+        </button>
+      );
     } else {
       return (
         <button
@@ -51,7 +58,6 @@ class GoogleAuth extends Component {
   }
 
   render() {
-    console.log(this.props.auth);
     return <React.Fragment>{this.renderAuthButton()}</React.Fragment>;
   }
 }
@@ -64,4 +70,4 @@ export default connect(
   mapStateToProps,
   { signIn, signOut }
 )(GoogleAuth);
-//Client-ID:953547866787-84l82sks23sj7mfgnqa79hkns4934ft8.apps.googleusercontent.com
+

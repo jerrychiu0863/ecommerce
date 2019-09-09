@@ -1,8 +1,8 @@
 import React from 'react';
 import '../css/App.css';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 
-//Componenets
+//Components
 import Navbar from './commons/Navbar';
 import LandingPage from './main/LandingPage';
 import ProductItem from './products/ProductItem';
@@ -13,7 +13,7 @@ import Footer from './commons/Footer';
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/">
       <div className="App">
         <Header />
         <Navbar />

@@ -1,19 +1,10 @@
 import React from 'react';
+import '../../css/commons/Footer.css';
 
 const Footer = () => {
   return (
-    <div
-      style={{
-        marginTop: '80px',
-        background: '#232347',
-        padding: '20px 0',
-        textAlign: 'center',
-        color: '#f3f3f3'
-      }}
-    >
-      <p style={{ opacity: '.8', margin: '0', fontSize: '14px' }}>
-        &copy; 2019 DecoMe, Inc.
-      </p>
+    <div className="Footer">
+      <p className="Footer-text">&copy; 2019 DecoMe, Inc.</p>
     </div>
   );
 };

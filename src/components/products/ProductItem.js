@@ -3,6 +3,7 @@ import '../../css/products/ProductItem.css';
 import { connect } from 'react-redux';
 import { addItemToCart } from '../../actions';
 
+//Components
 import Modal from '../Modal';
 
 class ProductItem extends Component {

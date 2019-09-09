@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
+import '../../css/main/Carousel.css';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
-import '../../css/main/Carousel.css';
 
 const carousels = ['one', 'two', 'three', 'four'];
 
@@ -17,22 +17,13 @@ class CarouselDisplay extends Component {
       speed: 500,
       dots: true,
       arrows: false,
-      autoplay: false
+      autoplay: true
     };
     return (
-      <div
-        style={{
-          width: '100%',
-          //marginLeft: '-138px',
-          margin: '0px auto 20px auto',
-          paddingTop: '50px'
-          //background: '#f7f7f7'
-        }}
-        className="Carousel"
-      >
+      <div className="Carousel">
         <Slider {...settings}>
           {carousels.map(carousel => (
-            <div>
+            <div key={carousel}>
               <img
                 className="Carousel--img"
                 src={require(`../../assets/carousel/carousel_${carousel}_medium_720x480.jpg`)}

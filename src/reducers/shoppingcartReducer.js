@@ -1,21 +1,14 @@
 import _ from 'lodash';
+import {
+  ADD_ITEM_TO_CART,
+  REMOVE_ITEM_FROM_CART,
+  ADD_ONE_QUANTITY,
+  REMOVE_ONE_QUANTITY
+} from '../actions/types';
 
-const INITIAL_CART = {
-  streamlined_earing: {
-    id: 'streamlined_earing',
-    category: 'earing',
-    seller: 'Stephine',
-    img: 'earing/streamlined-earing_720x480.jpg',
-    title: 'Streamlined earings',
-    price: 7200,
-    popular: true,
-    quantity: 10
-  }
-};
-
-export const shoppingcart = (state = INITIAL_CART, action) => {
+export const shoppingcart = (state = {}, action) => {
   switch (action.type) {
-    case 'ADD_ITEM_TO_CART':
+    case ADD_ITEM_TO_CART:
       return {
         ...state,
         [action.payload.id]: {
@@ -24,10 +17,10 @@ export const shoppingcart = (state = INITIAL_CART, action) => {
         }
       };
 
-    case 'REMOVE_ITEM_FROM_CART':
+    case REMOVE_ITEM_FROM_CART:
       return _.omit(state, action.payload);
 
-    case 'ADD_ONE_QUANTITY':
+    case ADD_ONE_QUANTITY:
       return {
         ...state,
         [action.payload]: {
@@ -36,7 +29,7 @@ export const shoppingcart = (state = INITIAL_CART, action) => {
         }
       };
 
-    case 'REMOVE_ONE_QUANTITY':
+    case REMOVE_ONE_QUANTITY:
       const { quantity } = state[action.payload];
       return {
         ...state,

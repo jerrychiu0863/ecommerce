@@ -74,7 +74,7 @@ class ShoppingCart extends Component {
                     ></i>
                   </p>
                 </div>
-                <p  className="Item--price">
+                <p className="Item--price">
                   {this.formatPrice(product.price)}
                   <i
                     onClick={() => this.props.removeItemFromCart(product.id)}
@@ -89,9 +89,7 @@ class ShoppingCart extends Component {
               <span>Total:</span>
               <span>{this.renderTotalPrice()}</span>
             </p>
-            <button className="btn btn-primary" style={{ width: '100%' }}>
-              Checkout
-            </button>
+            <button className="ShoppinCart--btn btn">Checkout</button>
           </div>
         </div>
       </div>

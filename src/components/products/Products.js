@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import '../../css/products/Products.css';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { onSelectChange } from '../../actions';
+import { onSortingChange } from '../../actions';
 
+//Components
 import ProductCard from '../commons/ProductCard';
 
 class Products extends Component {
@@ -48,7 +49,6 @@ class Products extends Component {
   }
 
   render() {
-    //console.log(this.props.match.params.category);
     return (
       <div className="Products">
         <div className="Products__container container row">
@@ -62,7 +62,7 @@ class Products extends Component {
                 <label className="ProductsHeader-label mr-1">Sort by</label>
                 <select
                   className="ProductsHeader-select"
-                  onChange={e => this.props.onSelectChange(e.target.value)}
+                  onChange={e => this.props.onSortingChange(e.target.value)}
                 >
                   <option value="name">Name</option>
                   <option value="highest">Highest Price</option>
@@ -104,5 +104,5 @@ const mapStateToProps = (state, ownProperty) => {
 
 export default connect(
   mapStateToProps,
-  { onSelectChange }
+  { onSortingChange }
 )(Products);

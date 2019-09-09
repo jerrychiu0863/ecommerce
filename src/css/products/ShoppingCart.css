@@ -52,6 +52,22 @@
   font-weight: bold;
 }
 
+.ShoppinCart--btn {
+  width: 100%;
+  background: #232347;
+  color: #fff;
+  height: 40px;
+  font-size: 18px;
+  opacity: 0.9;
+  transition: all 0.2s linear;
+}
+
+.ShoppinCart--btn:hover {
+  background: #191f32;
+  opacity: 1;
+  color: #fff;
+}
+
 /*S Mobile devices */
 @media (max-width: 480px) {
   .Item--title {

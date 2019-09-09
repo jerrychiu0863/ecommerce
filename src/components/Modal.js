@@ -18,7 +18,7 @@ class Modal extends Component {
     return ReactDOM.createPortal(
       <div className="Modal" onClick={this.props.closeModal}>
         <div onClick={e => e.stopPropagation()} className="Modal__container">
-          <p>Please sing up to add item to your cart!</p>
+          <p>Please sing up to add items to your cart!</p>
         </div>
       </div>,
       modalRoot

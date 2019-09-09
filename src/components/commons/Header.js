@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 import GoogleAuth from '../GoogleAuth';
 
 const Header = props => {
-  //console.log(props.products.length);
   return (
     <header className="navbar navbar-light">
       <div className="container">
